@@ -17,6 +17,9 @@ class App {
       if(isNaN(num)){
         throw new Error('[ERROR] 유효하지 않은 숫자가 포함되어 있습니다');
       }
+      if (num < 0) {
+        throw new Error('[ERROR] 음수는 입력할 수 없습니다');
+      }
       return sum+num;
     },0);
     return sum;
